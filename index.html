@@ -5,64 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HM Aesthetics Dental Clinic</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
+font-family:Poppins,sans-serif;
 background:#ffffff;
 color:#222;
 }
 
 header{
-background:#0f1d35;
-color:white;
-padding:20px;
-text-align:center;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(10px);
+z-index:1000;
 }
 
-header h1{
-font-size:32px;
-}
-
-header p{
-margin-top:10px;
-font-size:18px;
+.logo{
 color:#d4af37;
+font-size:28px;
+font-family:'Cormorant Garamond',serif;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-size:15px;
 }
 
 .hero{
-padding:60px 20px;
-text-align:center;
-background:#f7f7f7;
+height:100vh;
+background:url('hero.jpg') center center/cover no-repeat;
+display:flex;
+align-items:center;
+padding:0 8%;
+position:relative;
 }
 
-.hero h2{
-font-size:38px;
+.hero::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,.55);
+}
+
+.content{
+position:relative;
+max-width:650px;
+color:white;
+}
+
+.content h1{
+font-family:'Cormorant Garamond',serif;
+font-size:70px;
+line-height:1;
 margin-bottom:20px;
 }
 
-.hero p{
-font-size:18px;
+.content p{
+font-size:20px;
+margin-bottom:35px;
 line-height:1.6;
-max-width:700px;
-margin:auto;
 }
 
-.button{
+.btn{
 display:inline-block;
-margin-top:30px;
-padding:15px 35px;
-background:#d4af37;
+padding:16px 34px;
+background:#c7a15a;
 color:white;
 text-decoration:none;
-font-size:18px;
-border-radius:6px;
+border-radius:50px;
+font-weight:bold;
 }
+
+.btn:hover{
+background:#a78442;
+}
+
 </style>
 
 </head>
@@ -70,24 +109,37 @@ border-radius:6px;
 <body>
 
 <header>
-<h1>HM Aesthetics Dental Clinic</h1>
-<p>Your Smile, Our Passion</p>
+
+<div class="logo">
+HM Aesthetics
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+
 </header>
 
 <section class="hero">
 
-<h2>Premium Dental Care in Mandaue City</h2>
+<div class="content">
+
+<h1>Your Smile,<br>Our Passion</h1>
 
 <p>
-Experience modern dentistry with advanced technology,
-expert dentists, and a comfortable clinic designed to
-give you the smile you deserve.
+Premium Cosmetic & General Dentistry in Paradise Square,
+Mandaue City.
 </p>
 
-<a class="button"
+<a class="btn"
 href="https://mydmdapp.com/c/hmaesthetics">
 Book Appointment
 </a>
+
+</div>
 
 </section>
 
